@@ -17,13 +17,15 @@ export const Navbar = () => {
 
   
   return (
-    <div>
+    <div className='nav'>
         <h1>MovieLink</h1>
-        <SearchBar />
-        <Link to="/login">Login </Link>
-        <Link to="/">Home</Link>
-        <img src={user?.photoURL || ""} width="100px" height="100px" />
-      
+        <SearchBar/>
+        <div className='user-section'>
+        <Link className='link' to="/login" > Login </Link>
+        <Link className='link' to="/" >Home</Link>
+        <Link className='link' to="/movie">Movie</Link>
+        <img src={user?.photoURL || ""} className='user-img' />
+        </div>
     </div>
   )
 }
